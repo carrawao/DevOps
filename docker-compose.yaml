@@ -1,0 +1,9 @@
+version: '1.0'
+
+services:
+	devops:
+		build:
+			context: .
+			dockerfile: ./dockerfile
+		ports:
+			- 5000:5000
