@@ -2,5 +2,11 @@
 
 ### Zu bearbeitendes Projekt bzgl. DevOps Wahlfach Vorlesung
 
-### Docker Hub Image
+
+### Installation 
+```console 
 docker pull lukashanswalter/ubuntutest
+
+docker run lukashanswalter/ubuntutest
+
+```
