@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www/website":{"guestpath":"/var/www/website","hostpath":"D:/Bibliotheken/Studium/DevOps/DevOps/devops","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"D:/Bibliotheken/Studium/DevOps/DevOps","disabled":false,"__vagrantfile":true}}}
