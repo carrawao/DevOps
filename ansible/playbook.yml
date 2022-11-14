@@ -1,0 +1,19 @@
+- name: update web servers
+  hosts: localhost
+  remote_user: root
+
+  tasks:
+    - name: install python3
+      apt:
+        name: python3
+        update_cache: true
+    - name: install python3-pip
+      apt:
+        name: python3-pip
+        update_cache: true
+    - name: Install Flask
+      shell: "pip install -U Flask"
+    - name: Start flask application
+      shell: "python3 -m flask run --host=0.0.0.0"
+      environment:
+        FLASK_APP: /var/www/website/app.py
