@@ -1,5 +1,4 @@
-FROM ubuntu:trusty
-MAINTAINER Lukas Walter <inf20030@lehre.dhbw-stuttgart.de>
+FROM python:3.6.1-alpine
 
 ARG buildDate
 LABEL buildDate=$buildDate
@@ -20,11 +19,12 @@ RUN chmod +x /usr/sbin/policy-rc.d
 RUN \
   apt-get update && \
   apt-get -y install \
-          software-properties-common \
-          vim \
-          pwgen \
-          unzip \
-          curl \
-          git-core && \
-  rm -rf /var/lib/apt/lists/*
-
+        software-properties-common \
+        vim \
+        pwgen \
+        unzip \
+        curl \
+        python3-pip \
+        git-core && \
+  rm -rf /var/lib/apt/lists/* \
+  pip3 install -r devops/requirements.txt
