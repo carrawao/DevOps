@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
     apt install -y python3
     apt install -y python3-pip
     pip install -U Flask
-    python3 /var/www/website/app.py
+    export FLASK_APP="/var/www/website/app.py"
+    python3 -m flask run --host=0.0.0.0 
   SHELL
 end
