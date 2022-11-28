@@ -1,4 +1,4 @@
 variable "region" { 
-    type = string
-    nullable = false
+  type = string
+  nullable = false
 }
