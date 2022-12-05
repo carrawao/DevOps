@@ -28,8 +28,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f devops/requirements.txt ]; then pip install -r devops/requirements.txt; fi
       - name: Test with pytest
         run: |
-          cd devops/ python3 -m pytest
+          cd devops/
+          python -m pytest -v
       - run: echo "🍏 This job's status is ${{ job.status }}."
