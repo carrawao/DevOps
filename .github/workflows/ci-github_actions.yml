@@ -1,4 +1,4 @@
-name: DHBW DevOps Github-Actions
+name: DHBW DevOps CI Github-Actions
 on:
   push:
     branches: [ "main" ]
