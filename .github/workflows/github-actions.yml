@@ -32,3 +32,4 @@ jobs:
       - name: Test with pytest
         run: |
           pytest
+      - run: echo "🍏 This job's status is ${{ job.status }}."
