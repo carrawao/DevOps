@@ -1,5 +1,13 @@
 name: DHBW DevOps CD Github-Actions
 on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    types:
+      - opened
+      - ready_for_review
+      - review_requested
   release:
     types: [published]
 jobs:
@@ -22,7 +30,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{secrets.DOCKER_HUB_USERNAME }}/<docker_repository>:latest,${{ secrets.DOCKER_HUB_USERNAME }}/<docker_repository>:${{ github.sha }}
+          tags: ${{secrets.DOCKER_HUB_USERNAME }}/devops:latest,${{ secrets.DOCKER_HUB_USERNAME }}/devops:${{ github.sha }}
   deploy:
     runs-on: ubuntu-latest
     needs: build
